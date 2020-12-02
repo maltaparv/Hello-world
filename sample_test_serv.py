@@ -8,7 +8,7 @@ This code is in the public domain
 from socket import *
 import time
 myHost = ''
-myPort = 50007
+myPort = 50005
 
 sockobj = socket(AF_INET, SOCK_STREAM)
 sockobj.bind((myHost, myPort))
@@ -18,7 +18,9 @@ connection, address = sockobj.accept()
 print('Server connected by', address)
 
 d = connection.recv(1024)
-print(d.encode('hex'))
+print(f'Получено:\n{d.decode("cp1251")}')
 
 time.sleep(1.5)
-connection.send('\x04\x00\x00\x00tuxy')
+msg = 'Cock-A-Doodle-Doo! Кукареку! :)'.encode('1251')
+connection.send(msg)
+print(f'send:\n{msg.decode("1251")}')

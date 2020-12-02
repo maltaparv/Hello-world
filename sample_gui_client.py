@@ -1,4 +1,5 @@
 # https://eli.thegreenplace.net/2011/05/18/code-sample-socket-client-thread-in-python
+# https://github.com/eliben/code-for-blog/tree/master/2011/socket_client_thread_sample
 """
 Sample GUI using SocketClientThread for socket communication, while doing other
 stuff in parallel.

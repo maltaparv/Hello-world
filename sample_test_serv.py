@@ -22,5 +22,7 @@ print(f'Получено:\n{d.decode("cp1251")}')
 
 time.sleep(1.5)
 msg = 'Cock-A-Doodle-Doo! Кукареку! :)'.encode('1251')
+msg = '\x04\x00\x00\x00tuxy'.encode()
 connection.send(msg)
-print(f'send:\n{msg.decode("1251")}')
+# print(f'1send:\n{msg.decode("1251")}')
+print(f'2send:\n{msg}')

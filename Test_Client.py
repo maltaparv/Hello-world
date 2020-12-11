@@ -5,8 +5,8 @@ import socket
 import datetime
 
 HOST = '127.0.0.1'
-PORT = 20550
-PORT = 20350  # моделирую отправку от SYSMEX XN-350 :)
+PORT = 20550  # моделирую отправку от SYSMEX XN-550
+# PORT = 20350  # моделирую отправку от SYSMEX XN-350 :)
 BUFFER_SIZE = 1024 * 20
 
 

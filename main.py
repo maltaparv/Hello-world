@@ -6,17 +6,13 @@ import datetime
 
 HOST = '127.0.0.1'
 PORT = 20550
-BUFFER_SIZE = 1024
-MESSAGE = 'Hello, World!'
 
 
 def sendmes(mes) -> None:
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((HOST, PORT))
     s.send(mes)
-    # data = s.recv(BUFFER_SIZE)
-    # s.close()
-    # print("received data:", data)
+    s.close()
 
 
 print(f'Run Client mode.Testing HOST={HOST}:{PORT}')

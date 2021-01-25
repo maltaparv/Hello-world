@@ -132,7 +132,7 @@ class SocketClientThread(threading.Thread):
 if __name__ == "__main__":
     sct = SocketClientThread()
     sct.start()
-    sct.cmd_q.put(ClientCommand(ClientCommand.CONNECT, ('localhost', 50005)))
+    sct.cmd_q.put(Clie ntCommand(ClientCommand.CONNECT, ('localhost', 50005)))
     reply = sct.reply_q.get(True)
     print(reply.type, reply.data)
     sct.cmd_q.put(ClientCommand(ClientCommand.SEND, "hellothere"))
